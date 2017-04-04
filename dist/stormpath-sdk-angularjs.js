@@ -2,7 +2,7 @@
  * stormpath-sdk-angularjs
  * Copyright Stormpath, Inc. 2017
  * 
- * @version v2.0.0-dev-2017-01-12
+ * @version v2.0.0-dev-2017-04-04
  * @link https://github.com/stormpath/stormpath-sdk-angularjs
  * @license Apache-2.0
  */
@@ -4108,7 +4108,7 @@ angular.module('stormpath.utils', ['stormpath.CONFIG'])
     var link = $window.document.createElement('a');
     link.href = url;
 
-    return $window.location.host === link.host;
+    return $window.location.host === link.host.replace(/:443/, "");
   };
 }])
 .constant('$spHeaders', {
